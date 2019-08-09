@@ -4,6 +4,61 @@
      $KEY = "XDOJv1ll49xBH0Q"; //enter your key
     $SECRET = "wJSW9DvcgXOVRbZgV5KELviGf"; //enter your secret
     $Topic = "$topic"; 
+   $msg = '{
+  "type": "flex",
+  "altText": "Flex Message",
+  "contents": {
+    "type": "bubble",
+    "direction": "ltr",
+    "header": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "Header",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "Text"
+        }
+      ]
+    },
+    "hero": {
+      "type": "image",
+      "url": "https://developers.line.biz/assets/images/services/bot-designer-icon.png",
+      "size": "full",
+      "aspectRatio": "1.51:1",
+      "aspectMode": "fit"
+    },
+    "body": {
+      "type": "box",
+      "layout": "vertical",
+      "contents": [
+        {
+          "type": "text",
+          "text": "เลขวงจร",
+          "size": "xl",
+          "align": "center"
+        },
+        {
+          "type": "text",
+          "text": "ดูกราฟ",
+          "size": "xl",
+          "align": "center",
+          "gravity": "center",
+          "color": "#000000",
+          "action": {
+            "type": "message",
+            "label": "ดูกราฟ",
+            "text": "ดูกราฟ"
+          }
+        }
+      ]
+    }
+  }
+}';
       put("https://api.netpie.io/microgear/".$APPID.$Topic."?retain&auth=".$KEY.":".$SECRET,$msg);
  
   }
